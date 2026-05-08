@@ -47,7 +47,7 @@ segment=${segment:1:10000}
 
 while true; do
 	clear
-	hms=$( date +"%I%M%S" )
+	hms=$( date +"%I%M%S" | sed s/^12/00/ )
 	ms=${hms:2:4}
     h=cfg
 	cps=( 113000 103000 093000 083000 073000 063000 053000 043000 033000 023000 013000 003000 )
